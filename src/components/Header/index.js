@@ -11,16 +11,21 @@ const navigation = [
 
 ]
 
-const Header = ({ currentPage, handlePageChange }) => {
+const Header = ({ currentpage, handlePageChange }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+    const threeMenuFunction = (item) => {
+        handlePageChange(item.name)
+        setMobileMenuOpen(false)
+    }
 
     return (
         <div className="isolate bg-white">
             <div className="px-6 pt-6 lg:px-8">
                 <nav className="flex items-center justify-between" aria-label="Global">
                     <div className="flex lg:flex-1">
-                        <a href="#home" className="-m-1.5 p-1.5"  onClick={() => handlePageChange('Home')}>
-                            <span className="sr-only">Your Company</span>
+                        <a href="#home" className="-m-1.5 p-1.5" onClick={() => handlePageChange('Home')}>
+                            <span className="sr-only">A Call for Civility</span>
                             <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
                         </a>
                     </div>
@@ -36,23 +41,23 @@ const Header = ({ currentPage, handlePageChange }) => {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12 text-black">
                         {navigation.map((item) => (
-                            <a key={item.name} href={item.href} id={item.name} onClick={() => handlePageChange(item.name)} 
-                            className="text-sm font-semibold leading-6 text-gray-900" 
+                            <a key={item.name} href={item.href} id={item.name} onClick={() => handlePageChange(item.name)}
+                                className="text-sm font-semibold leading-6 text-gray-900"
                             >
                                 {item.name}
                             </a>
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                             <span aria-hidden="true"></span>
+                        <a href="#yourcompany" className="text-sm font-semibold leading-6 text-gray-900">
+                            <span aria-hidden="true"></span>
                         </a>
                     </div>
                 </nav>
                 <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <Dialog.Panel focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                         <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <a href="#yourcompany" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
                                 <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
                             </a>
@@ -72,26 +77,19 @@ const Header = ({ currentPage, handlePageChange }) => {
                                         <a
                                             key={item.name}
                                             href={item.href}
+                                            onClick={() => threeMenuFunction(item)}
                                             className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                                         >
                                             {item.name}
                                         </a>
                                     ))}
                                 </div>
-                                <div className="py-6">
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
-                                    >
-                                        Log in
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </Dialog.Panel>
                 </Dialog>
             </div>
-            
+
         </div>
     )
 }

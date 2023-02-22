@@ -10,34 +10,35 @@ import Contact from './pages/Contact/index'
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('/');
+  const [currentpage, setCurrentPage] = useState('/Home');
 
   const renderPage = () => {
-    if (currentPage === 'Pledge') {
+    if (currentpage === 'Pledge') {
       return <Pledge />;
     }
-    if (currentPage === 'About') {
+    if (currentpage === 'About') {
       return <About />;
     }
-    if (currentPage === 'Donate') {
+    if (currentpage === 'Donate') {
       return <Donate />;
     }
-    if (currentPage === 'Video') {
+    if (currentpage === 'Video') {
       return <Video />;
     }
-    if (currentPage === 'Contact') {
+    if (currentpage === 'Contact') {
       return <Contact />;
     }
-    if (currentPage === 'Home') {
-      return <Home />;
+    if (currentpage === 'Home') {
+      return <Home currentpage={currentpage} handlePageChange={handlePageChange}  />;
     }
+    return <Home currentpage={currentpage} handlePageChange={handlePageChange}  />
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header currentpage={currentpage} handlePageChange={handlePageChange} />
       {renderPage()}
     </div>
   )
