@@ -6,6 +6,7 @@ import About from './pages/About/index'
 import Donate from './pages/Donate/index'
 import Video from './pages/Video/index'
 import Contact from './pages/Contact/index'
+import Footer from './components/Footer/index'
 
 
 
@@ -40,6 +41,7 @@ function App() {
     <div>
       <Header currentpage={currentpage} handlePageChange={handlePageChange} />
       {renderPage()}
+      <Footer />
     </div>
   )
 }
