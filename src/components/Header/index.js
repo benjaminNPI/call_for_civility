@@ -8,8 +8,12 @@ import './style.css'
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+    const threeMenuFunction = () => {
+        setMobileMenuOpen(false)
+    }
+
     const style = {
-        margin: "0px 22px 0px 22px"
+        margin: "20px 22px 0px 22px"
     }
 
     return (
@@ -65,11 +69,9 @@ const Header = () => {
                     </div>
                 </nav>
                 <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                    <Dialog.Panel focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+                    <Dialog.Panel focus="true" className="fixed w-3/4 ml-auto inset-0 z-10 overflow-y-auto bg-slate-100 px-6 py-6 lg:hidden">
                         <div className="flex items-center justify-between">
-                            <a href="/" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Call for Civility</span>
-                                <img className="h-8" src="/img/logo.png" alt="Call for Civility Logo" />
+                            <a className="-m-1.5 p-1.5">
                             </a>
                             <button
                                 type="button"
@@ -81,18 +83,36 @@ const Header = () => {
                             </button>
                         </div>
                         <div className="mt-6 flow-root">
-                            <div className="-my-6 divide-y divide-gray-500/10">
-                                <div className="space-y-2 py-6 text-4xl">
-                                    {/* {navigation.map((item) => (
-                                        <a
-                                            key={item.name}
-                                            href={item.href}
-                                            id={item.name}
-                                            className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-                                        >
-                                            {item.name}
-                                        </a>
-                                    ))} */}
+                            <div className="-my-6 divide-y divide-gray-500/10 ">
+                                <div className="py-6 activeLink  px-3 text-2xl font-semibold text-gray-900 flex flex-col">
+                                    <NavLink
+                                        to=""
+                                        style={style}
+                                        onClick={threeMenuFunction}
+                                        className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                                        Home
+                                    </NavLink>
+                                    <NavLink
+                                        to="about"
+                                        style={style}
+                                        onClick={threeMenuFunction}
+                                        className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                                        About
+                                    </NavLink>
+                                    <NavLink
+                                        to="video"
+                                        style={style}
+                                        onClick={threeMenuFunction}
+                                        className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                                        Video
+                                    </NavLink>
+                                    <NavLink
+                                        to="Contact"
+                                        style={style}
+                                        onClick={threeMenuFunction}
+                                        className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                                        Contact
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>
