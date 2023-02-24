@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Header from './components/Header/index'
 import Home from './pages/Home/index'
 import Pledge from './pages/Pledge/index'
@@ -9,47 +10,31 @@ import Footer from './components/Footer/index'
 import Welcome from './pages/Welcome/index'
 
 
-
 function App() {
-  const [currentpage, setCurrentPage] = useState('Home');
-
-  const renderPage = () => {
-    if (currentpage === 'Pledge') {
-      return <Pledge currentpage={currentpage} handlePageChange={handlePageChange}  />;
-
-    }
-    if (currentpage === 'About') {
-      return <About currentpage={currentpage} handlePageChange={handlePageChange}  />;
-
-    }
-    if (currentpage === 'Video') {
-      return <Video currentpage={currentpage} handlePageChange={handlePageChange}  />;
-
-    }
-    if (currentpage === 'Contact') {
-      return <Contact currentpage={currentpage} handlePageChange={handlePageChange}  />;
-
-    }
-    if (currentpage === 'Welcome') {
-      return <Welcome currentpage={currentpage} handlePageChange={handlePageChange}  />;
-
-      
-    }
-    if (currentpage === 'Home') {
-      return <Home currentpage={currentpage} handlePageChange={handlePageChange}  />;
-    }
-    return <Home currentpage={currentpage} handlePageChange={handlePageChange}  />
-  };
-
-  const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      <Header currentpage={currentpage} handlePageChange={handlePageChange} />
-      {renderPage()}
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} >
+          </Route>
+          <Route path="/about" element={<About />} >
+          </Route>
+          <Route path="/video" element={<Video />} >
+          </Route>
+          <Route path="/contact" element={<Contact />} >
+          </Route>
+          <Route path="/pledge" element={<Pledge />} >
+          </Route>
+          <Route path="/pledge/learn-more" element={<Welcome />} >
+          </Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+
     </div>
-  )
+  );
 }
 
 export default App;

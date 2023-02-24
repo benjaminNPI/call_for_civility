@@ -1,21 +1,6 @@
 import React from 'react';
-import '../../index.css';
-import { useState, useEffect } from 'react'
 
-
-
-
-const Home = ({ currentpage, handlePageChange }) => {
-
-    useEffect(() => {
-        if (currentpage === "Home") {
-            document.getElementById("Home").style.color = "red";
-            document.getElementById("About").style.color = "Black";
-            document.getElementById("Video").style.color = "Black";
-            document.getElementById("Contact").style.color = "Black";
-        }
-      }, []);
-
+const Home = () => {
     return (
         <>
             <div className={`justify-center bg-no-repeat bg-cover bg-center rounded-lg capital`}>
@@ -32,13 +17,12 @@ const Home = ({ currentpage, handlePageChange }) => {
                                 </p>
                                 <div className="mt-10 flex items-center justify-center gap-x-6">
                                     <a
-                                        href="#pledge"
-                                        onClick={() => handlePageChange("Pledge")}
+                                        href="/pledge"
                                         className="rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                     >
                                         Sign the Pledge
                                     </a>
-                                    <a href="#learn-more" onClick={() => handlePageChange("Welcome")} className="font-semibold leading-6 text-gray-900 hover:text-gray-600">
+                                    <a href="/pledge/learn-more" className="font-semibold leading-6 text-gray-900 hover:text-gray-600">
                                         Learn more <span aria-hidden="true">→</span>
                                     </a>
                                 </div>
