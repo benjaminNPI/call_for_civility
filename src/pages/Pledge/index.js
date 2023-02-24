@@ -1,7 +1,18 @@
 import React from 'react'
 import InnerHTML from 'dangerously-set-html-content'
+import { useState, useEffect } from 'react'
 
-const Pledge = () => {
+
+const Pledge = ( {currentpage} ) => {
+
+  useEffect(() => {
+    if (currentpage === "Pledge") {
+        document.getElementById("About").style.color = "Black";
+        document.getElementById("Home").style.color = "Black";
+        document.getElementById("Video").style.color = "Black";
+        document.getElementById("Contact").style.color = "Black";
+    }
+  }, []);
 
   const JotForm = `
 

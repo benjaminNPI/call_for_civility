@@ -11,23 +11,29 @@ import Welcome from './pages/Welcome/index'
 
 
 function App() {
-  const [currentpage, setCurrentPage] = useState('/Home');
+  const [currentpage, setCurrentPage] = useState('Home');
 
   const renderPage = () => {
     if (currentpage === 'Pledge') {
-      return <Pledge />;
+      return <Pledge currentpage={currentpage} handlePageChange={handlePageChange}  />;
+
     }
     if (currentpage === 'About') {
-      return <About />;
+      return <About currentpage={currentpage} handlePageChange={handlePageChange}  />;
+
     }
     if (currentpage === 'Video') {
-      return <Video />;
+      return <Video currentpage={currentpage} handlePageChange={handlePageChange}  />;
+
     }
     if (currentpage === 'Contact') {
-      return <Contact />;
+      return <Contact currentpage={currentpage} handlePageChange={handlePageChange}  />;
+
     }
     if (currentpage === 'Welcome') {
-      return <Welcome />;
+      return <Welcome currentpage={currentpage} handlePageChange={handlePageChange}  />;
+
+      
     }
     if (currentpage === 'Home') {
       return <Home currentpage={currentpage} handlePageChange={handlePageChange}  />;

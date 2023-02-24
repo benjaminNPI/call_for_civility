@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -41,8 +41,8 @@ const Header = ({ currentpage, handlePageChange }) => {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12 text-black ">
                         {navigation.map((item) => (
-                            <a key={item.name} href={item.href} id={item.name} onClick={() => handlePageChange(item.name)}
-                                className="text-sm font-semibold leading-6 text-gray-900 text-xl"
+                            <a key={item.name} href={item.href} id={item.name} style={item.style} onClick={() => handlePageChange(item.name)}
+                                className="text-sm font-semibold leading-6 text-gray-900 text-xl hover:text-red-600 SetActivePage"
                             >
                                 {item.name}
                             </a>
@@ -59,7 +59,7 @@ const Header = ({ currentpage, handlePageChange }) => {
                         <div className="flex items-center justify-between">
                             <a href="#yourcompany" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Call for Civility</span>
-                                <img className="h-8" src="/img/logo.png"  alt="Call for Civility Logo" />
+                                <img className="h-8" src="/img/logo.png" alt="Call for Civility Logo" />
                             </a>
                             <button
                                 type="button"

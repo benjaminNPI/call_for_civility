@@ -1,9 +1,20 @@
 import React from 'react';
 import '../../index.css';
+import { useState, useEffect } from 'react'
 
 
 
-const Home = ({ handlePageChange }) => {
+
+const Home = ({ currentpage, handlePageChange }) => {
+
+    useEffect(() => {
+        if (currentpage === "Home") {
+            document.getElementById("Home").style.color = "red";
+            document.getElementById("About").style.color = "Black";
+            document.getElementById("Video").style.color = "Black";
+            document.getElementById("Contact").style.color = "Black";
+        }
+      }, []);
 
     return (
         <>
@@ -27,7 +38,7 @@ const Home = ({ handlePageChange }) => {
                                     >
                                         Sign the Pledge
                                     </a>
-                                    <a href="#learn-more" onClick={() => handlePageChange("Welcome")} className="font-semibold leading-6 text-gray-900">
+                                    <a href="#learn-more" onClick={() => handlePageChange("Welcome")} className="font-semibold leading-6 text-gray-900 hover:text-gray-600">
                                         Learn more <span aria-hidden="true">→</span>
                                     </a>
                                 </div>

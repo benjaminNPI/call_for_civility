@@ -1,6 +1,18 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
-const About = () => {
+
+const About = ( {currentpage} ) => {
+
+  useEffect(() => {
+    if (currentpage === "About") {
+        document.getElementById("About").style.color = "red";
+        document.getElementById("Home").style.color = "Black";
+        document.getElementById("Video").style.color = "Black";
+        document.getElementById("Contact").style.color = "Black";
+    }
+  }, []);
+
   return (
     <main>
       <div className="relative px-6 lg:px-8">
