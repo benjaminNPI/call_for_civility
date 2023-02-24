@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="border-gray-900/10 pt-8">
-                    <p className="text-xs leading-5 text-gray-500">&copy; 2023. Sam Bushman, Inc. All Rights Reserved.</p>
+                    <p className="text-xs leading-5 text-gray-500 text-center">&copy; 2023. Sam Bushman, Inc. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

@@ -16,3 +16,23 @@ code {
     monospace;
 }
 
+.capital {
+  background-image: url('../public/img/cover_pic_home.webp');
+  position: relative;
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.capital::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(253, 253, 253, 0.521);
+}

@@ -7,6 +7,7 @@ import Donate from './pages/Donate/index'
 import Video from './pages/Video/index'
 import Contact from './pages/Contact/index'
 import Footer from './components/Footer/index'
+import Welcome from './pages/Welcome/index'
 
 
 
@@ -28,6 +29,9 @@ function App() {
     }
     if (currentpage === 'Contact') {
       return <Contact />;
+    }
+    if (currentpage === 'Welcome') {
+      return <Welcome />;
     }
     if (currentpage === 'Home') {
       return <Home currentpage={currentpage} handlePageChange={handlePageChange}  />;

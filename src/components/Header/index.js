@@ -9,6 +9,7 @@ const navigation = [
     { name: 'Video', href: '#video' },
     { name: 'Contact', href: '#contact' },
 
+
 ]
 
 const Header = ({ currentpage, handlePageChange }) => {
@@ -20,13 +21,13 @@ const Header = ({ currentpage, handlePageChange }) => {
     }
 
     return (
-        <div className="isolate bg-white">
+        <div className="isolate bg-white mb-5">
             <div className="px-6 pt-6 lg:px-8">
                 <nav className="flex items-center justify-between" aria-label="Global">
                     <div className="flex lg:flex-1">
                         <a href="#home" className="-m-1.5 p-1.5" onClick={() => handlePageChange('Home')}>
                             <span className="sr-only">A Call for Civility</span>
-                            <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                            <img className="h-12" src="/img/logo.png" alt="" />
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -39,10 +40,10 @@ const Header = ({ currentpage, handlePageChange }) => {
                             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-12 text-black">
+                    <div className="hidden lg:flex lg:gap-x-12 text-black ">
                         {navigation.map((item) => (
                             <a key={item.name} href={item.href} id={item.name} onClick={() => handlePageChange(item.name)}
-                                className="text-sm font-semibold leading-6 text-gray-900"
+                                className="text-sm font-semibold leading-6 text-gray-900 text-xl"
                             >
                                 {item.name}
                             </a>
@@ -58,7 +59,7 @@ const Header = ({ currentpage, handlePageChange }) => {
                     <Dialog.Panel focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                         <div className="flex items-center justify-between">
                             <a href="#yourcompany" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Your Company</span>
+                                <span className="sr-only">Call for Civility</span>
                                 <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
                             </a>
                             <button
@@ -72,7 +73,7 @@ const Header = ({ currentpage, handlePageChange }) => {
                         </div>
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
-                                <div className="space-y-2 py-6">
+                                <div className="space-y-2 py-6 text-4xl">
                                     {navigation.map((item) => (
                                         <a
                                             key={item.name}
