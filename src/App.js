@@ -3,7 +3,6 @@ import Header from './components/Header/index'
 import Home from './pages/Home/index'
 import Pledge from './pages/Pledge/index'
 import About from './pages/About/index'
-import Donate from './pages/Donate/index'
 import Video from './pages/Video/index'
 import Contact from './pages/Contact/index'
 import Footer from './components/Footer/index'
@@ -20,9 +19,6 @@ function App() {
     }
     if (currentpage === 'About') {
       return <About />;
-    }
-    if (currentpage === 'Donate') {
-      return <Donate />;
     }
     if (currentpage === 'Video') {
       return <Video />;

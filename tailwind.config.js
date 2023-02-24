@@ -15,6 +15,7 @@ module.exports = {
       '4xl': '2.441rem',
       '5xl': '3.052rem',
     },
+ 
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

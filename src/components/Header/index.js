@@ -5,7 +5,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Donate', href: '#donate' },
     { name: 'Video', href: '#video' },
     { name: 'Contact', href: '#contact' },
 
@@ -27,7 +26,7 @@ const Header = ({ currentpage, handlePageChange }) => {
                     <div className="flex lg:flex-1">
                         <a href="#home" className="-m-1.5 p-1.5" onClick={() => handlePageChange('Home')}>
                             <span className="sr-only">A Call for Civility</span>
-                            <img className="h-12" src="/img/logo.png" alt="" />
+                            <img className="h-12" src="/img/logo.png" alt="Call for Civility Logo" />
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -60,7 +59,7 @@ const Header = ({ currentpage, handlePageChange }) => {
                         <div className="flex items-center justify-between">
                             <a href="#yourcompany" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Call for Civility</span>
-                                <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                                <img className="h-8" src="/img/logo.png"  alt="Call for Civility Logo" />
                             </a>
                             <button
                                 type="button"
