@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fab417ac.css",
+    "main.js": "/static/js/main.cf1bac86.js",
+    "static/media/cover_pic_home.webp": "/static/media/cover_pic_home.9365c6512f5403fe55a8.webp",
+    "index.html": "/index.html",
+    "main.fab417ac.css.map": "/static/css/main.fab417ac.css.map",
+    "main.cf1bac86.js.map": "/static/js/main.cf1bac86.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fab417ac.css",
+    "static/js/main.cf1bac86.js"
+  ]
+}
