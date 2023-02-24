@@ -1,6 +1,7 @@
 {
-  "name": "a",
+  "name": "callforcivility",
   "version": "0.1.0",
+  "homepage": "https://www.bushmantest.com",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.12",
@@ -18,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "gh-pages": "^5.0.0",
     "tailwindcss": "^3.2.7"
   }
 }

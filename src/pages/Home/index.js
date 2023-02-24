@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -16,15 +17,15 @@ const Home = () => {
                                 <strong>In a country troubled with wars, hatred, and evil, we call on <strong>YOU</strong> to join the movement for civility and honor in our nation.</strong>
                                 </p>
                                 <div className="mt-10 flex items-center justify-center gap-x-6">
-                                    <a
-                                        href="/pledge"
+                                    <Link
+                                        to="/pledge"
                                         className="rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                     >
                                         Sign the Pledge
-                                    </a>
-                                    <a href="/pledge/learn-more" className="font-semibold leading-6 text-gray-900 hover:text-gray-600">
+                                    </Link>
+                                    <Link href="/pledge/learn-more" className="font-semibold leading-6 text-gray-900 hover:text-gray-600">
                                         Learn more <span aria-hidden="true">→</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
