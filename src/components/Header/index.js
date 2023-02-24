@@ -65,8 +65,6 @@ const Header = () => {
 
                         </div>
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    </div>
                 </nav>
                 <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <Dialog.Panel focus="true" className="fixed w-3/4 ml-auto inset-0 z-10 overflow-y-auto bg-slate-100 px-6 py-6 lg:hidden">
