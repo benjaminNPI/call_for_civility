@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 
 const Welcome = () => {
     document.title = "Welcome | Call for Civility"
@@ -19,7 +21,7 @@ const Welcome = () => {
                             </p>
 
                             <p className="mt-6 text-lg leading-8 text-gray-600">
-                                In 2015 I wrote an article <a href="letter-clarion-call-for-civility" className="underline italic hover:text-blue-900 font-semibold">A Clarion Call for Civility</a> to all media, celebrities, and public officials; begging us all to please remember the moral high ground of civility. Since that article was written, we have gone from the lack of civility to outright attacks on anyone who sees things differently than we do.
+                                In 2015 I wrote an article <Link to="letter-clarion-call-for-civility" className="underline italic hover:text-blue-900 font-semibold">A Clarion Call for Civility</Link> to all media, celebrities, and public officials; begging us all to please remember the moral high ground of civility. Since that article was written, we have gone from the lack of civility to outright attacks on anyone who sees things differently than we do.
                             </p>
 
                             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -27,11 +29,11 @@ const Welcome = () => {
                             </p>
 
                             <p className="mt-6 text-lg leading-8 text-gray-600">
-                                We will be launching a national speaking tour, and authoring solutions to remedy this serious threat to our beloved country and society at large. We have added to this website a <a href="/pledge" className="underline italic hover:text-blue-900 font-semibold">Call for Civility Pledge</a> that we are hoping millions will sign and agree to live by. We will be reaching out to leaders across America, and the world, to advocate for civility in all we do.
+                                We will be launching a national speaking tour, and authoring solutions to remedy this serious threat to our beloved country and society at large. We have added to this website a <Link to="/pledge" className="underline italic hover:text-blue-900 font-semibold">Call for Civility Pledge</Link> that we are hoping millions will sign and agree to live by. We will be reaching out to leaders across America, and the world, to advocate for civility in all we do.
                             </p>
 
                             <p className="mt-6 text-lg leading-8 text-gray-600">
-                                We need funding and volunteers at every level to make our hopes and efforts a reality. Will you sign the <a className="underline italic hover:text-blue-900 font-semibold" href="/pledge">Pledge</a> and help us in our sacred cause?
+                                We need funding and volunteers at every level to make our hopes and efforts a reality. Will you sign the <Link className="underline italic hover:text-blue-900 font-semibold" to="/pledge">Pledge</Link> and help us in our sacred cause?
                             </p>
                         </div>
 
