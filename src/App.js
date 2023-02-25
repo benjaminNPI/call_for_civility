@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import Header from './components/Header/index'
-import Home from './pages/Home/index'
-import Pledge from './pages/Pledge/index'
-import About from './pages/About/index'
-import Video from './pages/Video/index'
-import Contact from './pages/Contact/index'
-import Footer from './components/Footer/index'
-import Welcome from './pages/Welcome/index'
+import Header from './components/Header/index';
+import Home from './pages/Home/index';
+import Pledge from './pages/Pledge/index';
+import About from './pages/About/index';
+import Video from './pages/Video/index';
+import Contact from './pages/Contact/index';
+import Footer from './components/Footer/index';
+import Welcome from './pages/Welcome/index';
+import { useEffect } from "react";
 
 
 function App() {

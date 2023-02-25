@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const Home = () => {
+    document.title = "Home | Call for Civility"
     return (
         <>
             <div className={`justify-center bg-no-repeat bg-cover bg-center rounded-lg capital`}>
@@ -11,9 +12,9 @@ const Home = () => {
 
                             <div className="text-center">
                                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                                    A Call for Civility
+                                    A Clarion Call for Civility
                                 </h1>
-                                <p className="mt-6 text-lg leading-8 text-black-900">
+                                <p className="mt-6 text-5xl leading-8 text-black-900">
                                 <strong>In a country troubled with wars, hatred, and evil, we call on <strong>YOU</strong> to join the movement for civility and honor in our nation.</strong>
                                 </p>
                                 <div className="mt-10 flex items-center justify-center gap-x-6">

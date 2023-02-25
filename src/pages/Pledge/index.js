@@ -3,6 +3,7 @@ import InnerHTML from 'dangerously-set-html-content'
 
 
 const Pledge = () => {
+  document.title = "Pledge | Call for Civility"
 
   const JotForm = `
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About = (  ) => {
-
+  document.title = "About | Call for Civility"
   return (
     <main>
       <div className="relative px-6 lg:px-8">

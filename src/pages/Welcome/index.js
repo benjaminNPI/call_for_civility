@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Welcome = () => {
+    document.title = "Welcome | Call for Civility"
 
     return (
         <main>
