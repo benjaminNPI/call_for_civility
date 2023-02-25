@@ -17,7 +17,7 @@ code {
 }
 
 .capital {
-  background-image: url('../public/img/cover_pic_home.webp');
+  background-image: url('../build/img/cover_pic_home.webp');
   position: relative;
   height: 92vh;
   width: 100%;
