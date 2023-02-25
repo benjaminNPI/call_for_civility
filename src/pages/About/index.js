@@ -3,10 +3,9 @@ import React from 'react'
 const About = (  ) => {
   document.title = "About | Call for Civility"
   return (
-    <main>
+    <main className="mb-24">
       <div className="relative px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-56">
-
+        <div className="mx-auto max-w-2xl pt-20 sm:pt-24 lg:pt-24">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               About Us

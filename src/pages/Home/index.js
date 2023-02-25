@@ -24,8 +24,8 @@ const Home = () => {
                                     >
                                         Sign the Pledge
                                     </Link>
-                                    <Link to="/pledge/learn-more" className="font-semibold leading-6 text-gray-900 hover:text-gray-600">
-                                        Learn more <span aria-hidden="true">→</span>
+                                    <Link to="/letter-clarion-call-for-civility" className="font-semibold leading-6 text-gray-900 hover:text-gray-600">
+                                        Read the Call <span aria-hidden="true">→</span>
                                     </Link>
                                 </div>
                             </div>

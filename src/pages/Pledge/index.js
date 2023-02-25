@@ -108,7 +108,7 @@ if (window.addEventListener) {
   `
 
   return (
-    <div>
+    <div className="mb-24">
       <main>
         <div className="relative px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-24 sm:py-24 lg:py-24">
@@ -126,7 +126,7 @@ if (window.addEventListener) {
         </div>
       </main>
       <div className="bg-white justify-center flex">
-        <InnerHTML html={JotForm} className="w-1/2" />
+        <InnerHTML html={JotForm} className="sm:w-1/2 w-full md:w-3/4 lg:w-1/2" />
       </div>
     </div>
   )

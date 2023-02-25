@@ -38,7 +38,7 @@ code {
 }
 
 .activeLink a.active {
-  color: red;
+  color: #C8B591;
 }
 .activeLink a.inactive {
   color: Black;

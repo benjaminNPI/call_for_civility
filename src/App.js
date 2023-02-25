@@ -8,7 +8,7 @@ import Video from './pages/Video/index';
 import Contact from './pages/Contact/index';
 import Footer from './components/Footer/index';
 import Welcome from './pages/Welcome/index';
-import { useEffect } from "react";
+import Letter from './pages/Letter/index';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} >
           </Route>
-          <Route path="/about" element={<About />} >
+          <Route path="/about-us" element={<About />} >
           </Route>
           <Route path="/video" element={<Video />} >
           </Route>
@@ -28,7 +28,9 @@ function App() {
           </Route>
           <Route path="/pledge" element={<Pledge />} >
           </Route>
-          <Route path="/pledge/learn-more" element={<Welcome />} >
+          <Route path="/welcome" element={<Welcome />} >
+          </Route>
+          <Route path="/letter-clarion-call-for-civility" element={<Letter />} >
           </Route>
         </Routes>
         <Footer />

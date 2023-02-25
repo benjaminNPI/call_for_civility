@@ -45,10 +45,16 @@ const Header = () => {
                                 Home
                             </NavLink>
                             <NavLink
-                                to="about"
+                                to="/welcome"
                                 style={style}
                                 className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
-                                About
+                                Welcome
+                            </NavLink>
+                            <NavLink
+                                to="about-us"
+                                style={style}
+                                className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                                About Us
                             </NavLink>
                             <NavLink
                                 to="video"
@@ -69,8 +75,7 @@ const Header = () => {
                 <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <Dialog.Panel focus="true" className="fixed w-3/4 ml-auto inset-0 z-10 overflow-y-auto bg-slate-100 px-6 py-6 lg:hidden">
                         <div className="flex items-center justify-between">
-                            <a className="-m-1.5 p-1.5">
-                            </a>
+                            
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -91,11 +96,18 @@ const Header = () => {
                                         Home
                                     </NavLink>
                                     <NavLink
-                                        to="about"
+                                        to="/welcome"
                                         style={style}
                                         onClick={threeMenuFunction}
                                         className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
-                                        About
+                                        Welcome
+                                    </NavLink>
+                                    <NavLink
+                                        to="about-us"
+                                        style={style}
+                                        onClick={threeMenuFunction}
+                                        className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                                       About Us
                                     </NavLink>
                                     <NavLink
                                         to="video"

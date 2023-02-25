@@ -104,13 +104,28 @@ if (window.addEventListener) {
 </script>`
   return (
     <>
-    <h2>Contact Us</h2>
-      <div className="bg-white justify-center flex">
-        <InnerHTML html={JotForm} className="w-1/2" />
-      </div>
-      <div>
-        <p>Telephone: 801-756-9133</p>
-      </div>
+      <main className="mb-24">
+        <div className="relative px-6 lg:px-8 mb-5 pb-5">
+          <div className="mx-auto max-w-2xl pt-20 sm:pt-24 lg:pt-24">
+
+            <div className="text-center">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Contact Us
+              </h1>
+
+              <br />
+              <br />
+              <div className="bg-white justify-center flex">
+                <InnerHTML html={JotForm} className="w-full" />
+              </div>
+            </div>
+            <div>
+              <p>--------------------------------------------------------------------------------------------------------</p>
+              <p>Telephone: 801-756-9133</p>
+            </div>
+          </div>
+        </div>
+      </main>
     </>
   )
 }
