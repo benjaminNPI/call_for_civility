@@ -1,29 +1,14 @@
 import React from 'react';
-import InnerHTML from 'dangerously-set-html-content';
 
 
 const Video = () => {
   document.title = "Video | Call for Civility"
 
-  const video1 = `
-  
-  <iframe width="660" height="415" src="https://www.youtube.com/embed/XFGXVwYIuF8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-`
-
-  const video2 = `
-  
-<iframe width="660" height="415" src="https://www.youtube.com/embed/NHyQgG178pM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-`
-
-
-
   return (
     <>
-      <main className="mb-24">
+      <main>
         <div className="relative px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl pt-20 sm:pt-24 lg:pt-24">
+          <div className="mx-auto max-w-2xl pt-20 sm:pt-24 lg:pt-24">
 
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -33,11 +18,11 @@ const Video = () => {
               <br />
               <br />
 
-              <div className="bg-white justify-center flex m-5 pb-5">
-                <InnerHTML html={video1} />
+              <div className="bg-white justify-center flex my-10">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XFGXVwYIuF8?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
-              <div className="bg-white justify-center flex m-5 pt-5">
-                <InnerHTML html={video2} />
+              <div className="bg-white justify-center flex my-10">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NHyQgG178pM?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
             </div>
           </div>
