@@ -21,7 +21,7 @@ const Welcome = () => {
                             </p>
 
                             <p className="mt-6 text-lg leading-8 text-gray-600">
-                                In 2015 I wrote an article <Link to="letter-clarion-call-for-civility" className="underline italic hover:text-blue-900 font-semibold">A Clarion Call for Civility</Link> to all media, celebrities, and public officials; begging us all to please remember the moral high ground of civility. Since that article was written, we have gone from the lack of civility to outright attacks on anyone who sees things differently than we do.
+                                In 2015 I wrote an article <Link to="/letter-clarion-call-for-civility" className="underline italic hover:text-blue-900 font-semibold">A Clarion Call for Civility</Link> to all media, celebrities, and public officials; begging us all to please remember the moral high ground of civility. Since that article was written, we have gone from the lack of civility to outright attacks on anyone who sees things differently than we do.
                             </p>
 
                             <p className="mt-6 text-lg leading-8 text-gray-600">
