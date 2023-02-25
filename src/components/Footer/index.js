@@ -12,6 +12,8 @@ const navigation = {
 }
 
 const Footer = () => {
+    const today = new Date();
+    const year = today.getFullYear();
     const value = "_blank"
     const style = {
         input1: {
@@ -56,7 +58,7 @@ const Footer = () => {
                     <form action="https://www.paypal.com/donate" method="post" target={value}><span style={style.input1}><input type="hidden" name="hosted_button_id" value="VKDJ8Y4KDGG4U" /> <input title="PayPal - The safer, easier way to pay online!" type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal button" /> <span className="image-block" style={style.input2}><img src="https://www.paypal.com/en_US/i/scr/pixel.gif?1636853941384" alt="" width="1" height="1" /></span></span></form>
                 </div>
                 <div className="border-gray-900/10 pt-8">
-                    <p className="text-xs leading-5 text-white text-center">&copy; 2023. Call for Civility. All Rights Reserved.</p>
+                    <p className="text-xs leading-5 text-white text-center">&copy; 2016-<span>{year}.</span> Call for Civility. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
