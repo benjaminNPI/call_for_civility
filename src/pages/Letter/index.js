@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Letter = () => {
+    document.title = "Letter | Call for Civility"
     return (
         <main className="mb-24">
             <div className="relative px-6 lg:px-8 mb-5 pb-5">
