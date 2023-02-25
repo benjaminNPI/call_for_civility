@@ -23,7 +23,7 @@ const Header = () => {
                     <div className="flex lg:flex-1">
                         <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">A Call for Civility</span>
-                            <img className="h-12" src="/img/logo.png" alt="Call for Civility Logo" />
+                            <img className="h-16 sm:h-24" src="/img/logo.png" alt="Call for Civility Logo" />
                         </a>
                     </div>
                     <div className="flex lg:hidden">
