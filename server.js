@@ -1,13 +1,14 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const PORT = 3001;
+require('babel-register')({
+    presets: ['react']
+});
 
-import Welcome from './src/pages/Welcome/index'
+var express = require('express');
+var app = express();
 
 app.use(express.static('public'));
+app.use(require('./src/index.js'));
 
-
-app.get('/welcome', (req, res) =>
-    res.sendFile(path.join(__dirname, <Welcome />))
-);
+var PORT = 3000;
+app.listen(PORT, function() {
+    console.log('http://localhost:' + PORT);
+});
