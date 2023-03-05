@@ -10,7 +10,6 @@ import Footer from './components/Footer/index';
 import Welcome from './pages/Welcome/index';
 import Letter from './pages/Letter/index';
 
-
 function App() {
 
   return (
