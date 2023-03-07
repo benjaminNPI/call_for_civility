@@ -1,4 +1,3 @@
-// import React from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Header from './components/Header/index';
 import Home from './pages/Home/index';
@@ -9,39 +8,6 @@ import Contact from './pages/Contact/index';
 import Footer from './components/Footer/index';
 import Welcome from './pages/Welcome/index';
 import Letter from './pages/Letter/index';
-
-
-// function App() {
-
-//   return (
-//     <div>
-//       <BrowserRouter>
-//         <Header />
-//         <Routes>
-//           <Route path="/" element={<Home />} >
-//           </Route>
-//           <Route path="/about-us" element={<About />} >
-//           </Route>
-//           <Route path="/video" element={<Video />} >
-//           </Route>
-//           <Route path="/contact" element={<Contact />} >
-//           </Route>
-//           <Route path="/pledge" element={<Pledge />} >
-//           </Route>
-//           <Route path="/welcome" element={<Welcome />} >
-//           </Route>
-//           <Route path="/letter-clarion-call-for-civility" element={<Letter />} >
-//           </Route>
-//         </Routes>
-//         <Footer />
-//       </BrowserRouter>
-
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { Component } from 'react';
 
 class App extends Component {
@@ -56,7 +22,7 @@ class App extends Component {
   }
   // fetching the GET route from the Express server which matches the GET route from server.js
   callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
+    const response = await fetch('/');
     const body = await response.json();
 
     if (response.status !== 200) {
