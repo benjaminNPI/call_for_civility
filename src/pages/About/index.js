@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About = (  ) => {
+const About = () => {
   document.title = "About | Call for Civility"
   return (
     <main className="mb-24">

@@ -18,11 +18,13 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    // "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": [
