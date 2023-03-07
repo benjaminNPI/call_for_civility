@@ -9,6 +9,6 @@ app.get("/", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
-app.get('/*', (req, res) => {
+app.get('https://callforcivility.com/*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './build', 'index.html'));
 });
