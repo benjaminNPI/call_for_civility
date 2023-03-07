@@ -9,6 +9,6 @@ app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
 //   res.json({ message: "Hello from server!" });
 // });
 
-app.get('https://callforcivility.com/*', (req, res) => {
+app.get('/welcome', (req, res) => {
   res.sendFile(path.resolve(__dirname, './build', 'index.html'));
 });
