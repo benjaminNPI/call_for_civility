@@ -6,6 +6,10 @@ const port = process.env.PORT || 5000; //Line 3
 app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
 
 // create a GET route
-app.get('/', (req, res) => { //Line 9
+app.get('/express_backend', (req, res) => { //Line 9
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
 }); //Line 11
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './build', 'index.html'));
+});
