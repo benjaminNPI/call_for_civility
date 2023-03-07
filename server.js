@@ -1,14 +1,11 @@
-require('babel-register')({
-    presets: ['react']
-});
+const express = require('express'); //Line 1
+const app = express(); //Line 2
+const port = process.env.PORT || 5000; //Line 3
 
-var express = require('express');
-var app = express();
+// This displays message that the server running and listening to specified port
+app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
 
-app.use(express.static('public'));
-app.use(require('./src/index.js'));
-
-var PORT = 3000;
-app.listen(PORT, function() {
-    console.log('http://localhost:' + PORT);
-});
+// create a GET route
+app.get('/express_backend', (req, res) => { //Line 9
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
+}); //Line 11
