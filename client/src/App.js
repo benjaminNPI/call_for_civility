@@ -11,13 +11,13 @@ import Letter from './pages/Letter/index';
 import React from 'react';
 
 function App() {
-  // const [data, setData] = React.useState(null);
+  const [data, setData] = React.useState(null);
 
-  // React.useEffect(() => {
-  //   fetch("/")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data.message));
-  // }, []);
+  React.useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
 
   return (
     <BrowserRouter>
