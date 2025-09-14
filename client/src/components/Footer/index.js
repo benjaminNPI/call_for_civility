@@ -6,7 +6,7 @@ const navigation = {
     sponsors: [
         { name: 'Loving Liberty Radio Network', href: 'https://lovingliberty.net/', img: "/img/lovingliberty.jpg" },
         { name: 'Rust Coin and Gift', href: 'https://rustgoldandsilver.com/',img: "/img/rustcoin.png" },
-        { name: 'Costitutional Sheriffs & Peace Officers Association', href: 'https://cspoa.org/', img: "/img/cspoa.png" },
+        { name: 'Constitutional Sheriffs & Peace Officers Association', href: 'https://cspoa.org/', img: "/img/cspoa.png" },
         { name: 'Small Business Tech Guys', href: 'https://sbtechguys.com/', img: "/img/sbtg.png" },
     ],
 }

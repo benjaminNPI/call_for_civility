@@ -15,7 +15,6 @@ function App() {
 
   React.useEffect(() => {
     fetch("/api")
-      .then(console.log("FAT TEST"))
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
@@ -23,7 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <h1>{message}</h1>
+      <h1>{data}</h1>
       <Routes>
         <Route path="/" element={<Home />} >
         </Route>
