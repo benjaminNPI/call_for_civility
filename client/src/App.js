@@ -8,21 +8,12 @@ import Contact from './pages/Contact/index';
 import Footer from './components/Footer/index';
 import Welcome from './pages/Welcome/index';
 import Letter from './pages/Letter/index';
-import React from 'react';
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
 
   return (
     <BrowserRouter>
       <Header />
-      <h1>{data}</h1>
       <Routes>
         <Route path="/" element={<Home />} >
         </Route>
