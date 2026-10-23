@@ -22,7 +22,11 @@ app.get("/api", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 // });
 
-const root = require('path').join(__dirname, '../client', 'build')
+// In the bundled deploy (dist/), the client build sits next to server.js in public/
+const path = require('path');
+const fs = require('fs');
+const bundled = path.join(__dirname, 'public');
+const root = fs.existsSync(bundled) ? bundled : path.join(__dirname, '../client', 'build')
 app.use(express.static(root));
 app.get("*", (req, res) => {
     res.sendFile('index.html', { root });
