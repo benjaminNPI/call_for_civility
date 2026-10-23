@@ -1,35 +1,41 @@
-import React from 'react';
+import usePageTitle from '../../hooks/usePageTitle';
+import PageHero from '../../components/PageHero/index';
+import Reveal from '../../components/Reveal/index';
 
+const videos = [
+  { id: 'XFGXVwYIuF8', title: 'Call for Civility video 1' },
+  { id: 'NHyQgG178pM', title: 'Call for Civility video 2' },
+];
 
 const Video = () => {
-  document.title = "Video | Call for Civility"
+  usePageTitle('Video');
 
   return (
     <>
-      <main>
-        <div className="relative px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl pt-20 sm:pt-24 lg:pt-24">
+      <PageHero eyebrow="Watch & share" title="Videos">
+        Watch videos of events, including interviews with Sam Bushman, Richard Mack, and other Civility Advocates.
+      </PageHero>
 
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Videos
-              </h1>
-              <p>Watch videos of events, including interviews with Sam Bushman, Richard Mack, and other Civility Advocates.</p>
-              <br />
-              <br />
-
-              <div className="bg-white justify-center flex my-10">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XFGXVwYIuF8?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+      <section className="container-page py-20 sm:py-24">
+        <div className="grid gap-8 lg:grid-cols-2">
+          {videos.map((v, i) => (
+            <Reveal key={v.id} delay={i * 120} className="card overflow-hidden p-2">
+              <div className="aspect-video overflow-hidden rounded-xl bg-navy-900">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+                  title={v.title}
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
               </div>
-              <div className="bg-white justify-center flex my-10">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/NHyQgG178pM?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              </div>
-            </div>
-          </div>
+            </Reveal>
+          ))}
         </div>
-      </main>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Video
+export default Video;

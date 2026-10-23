@@ -1,131 +1,69 @@
-import React from 'react'
-import InnerHTML from 'dangerously-set-html-content'
+import { Link } from 'react-router-dom'
+import { PhoneIcon, RadioIcon, PencilSquareIcon, ArrowUpRightIcon } from '@heroicons/react/24/outline'
+import usePageTitle from '../../hooks/usePageTitle'
+import PageHero from '../../components/PageHero/index'
+import Reveal from '../../components/Reveal/index'
+import JotFormEmbed from '../../components/JotFormEmbed/index'
+import { PHONE_DISPLAY, PHONE_HREF } from '../../nav'
 
 const Contact = () => {
-  document.title = "Contact | Call for Civility"
+  usePageTitle('Contact')
 
-  const JotForm = `
-  
-  <iframe
-  id="JotFormIFrame-213167564341151"
-  title="Call for Civility Contact Us"
-  onload="window.parent.scrollTo(0,0)"
-  allowtransparency="true"
-  allowfullscreen="true"
-  allow="geolocation; microphone; camera"
-  src="https://form.jotform.com/213167564341151"
-  frameborder="0"
-  style="min-width:100%;max-width:100%;height:539px;border:none;"
-  scrolling="no"
->
-</iframe>
-<script type="text/javascript">
-var ifr = document.getElementById("JotFormIFrame-213167564341151");
-if (ifr) {
-  var src = ifr.src;
-  var iframeParams = [];
-  if (window.location.href && window.location.href.indexOf("?") > -1) {
-    iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
-  }
-  if (src && src.indexOf("?") > -1) {
-    iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-    src = src.substr(0, src.indexOf("?"))
-  }
-  iframeParams.push("isIframeEmbed=1");
-  ifr.src = src + "?" + iframeParams.join('&');
-}
-window.handleIFrameMessage = function(e) {
-  if (typeof e.data === 'object') { return; }
-  var args = e.data.split(":");
-  if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-  if (!iframe) { return; }
-  switch (args[0]) {
-    case "scrollIntoView":
-      iframe.scrollIntoView();
-      break;
-    case "setHeight":
-      iframe.style.height = args[1] + "px";
-      if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
-        iframe.style.minHeight = args[1] + "px";
-      }
-      break;
-    case "collapseErrorPage":
-      if (iframe.clientHeight > window.innerHeight) {
-        iframe.style.height = window.innerHeight + "px";
-      }
-      break;
-    case "reloadPage":
-      window.location.reload();
-      break;
-    case "loadScript":
-      if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
-      var src = args[1];
-      if (args.length > 3) {
-          src = args[1] + ':' + args[2];
-      }
-      var script = document.createElement('script');
-      script.src = src;
-      script.type = 'text/javascript';
-      document.body.appendChild(script);
-      break;
-    case "exitFullscreen":
-      if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-      else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-      else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-      else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-      else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-      break;
-  }
-  var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-  if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-    var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-    iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-  }
-};
-window.isPermitted = function(originUrl, whitelisted_domains) {
-  var url = document.createElement('a');
-  url.href = originUrl;
-  var hostname = url.hostname;
-  var result = false;
-  if( typeof hostname !== 'undefined' ) {
-    whitelisted_domains.forEach(function(element) {
-        if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
-            result = true;
-        }
-    });
-    return result;
-  }
-};
-if (window.addEventListener) {
-  window.addEventListener("message", handleIFrameMessage, false);
-} else if (window.attachEvent) {
-  window.attachEvent("onmessage", handleIFrameMessage);
-}
-</script>`
   return (
     <>
-      <main className="mb-24">
-        <div className="relative px-6 lg:px-8 mb-5 pb-5">
-          <div className="mx-auto max-w-2xl pt-20 sm:pt-24 lg:pt-24">
+      <PageHero eyebrow="Get in touch" title="Contact Us">
+        Questions, speaking requests, or ways to volunteer: we would love to hear from you.
+      </PageHero>
 
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Contact Us
-              </h1>
+      <section className="container-page grid gap-10 py-20 sm:py-24 lg:grid-cols-12">
+        <div className="space-y-5 lg:col-span-4">
+          <Reveal as="a" href={PHONE_HREF} className="card group flex items-start gap-4 p-6 transition hover:-translate-y-0.5 hover:shadow-xl">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-royal-600 text-white">
+              <PhoneIcon className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block text-sm text-ink-soft">Call us</span>
+              <span className="mt-1 block font-display text-2xl font-semibold text-navy-900">{PHONE_DISPLAY}</span>
+            </span>
+          </Reveal>
 
-              <br />
-              <br />
-              <div className="bg-white justify-center flex">
-                <InnerHTML html={JotForm} className="w-full" />
-              </div>
-            </div>
-            <div>
-              <p>--------------------------------------------------------------------------------------------------------</p>
-              <p>Telephone: 801-756-9133</p>
-            </div>
-          </div>
+          <Reveal
+            as="a"
+            delay={80}
+            href="https://www.libertyroundtable.com"
+            target="_blank"
+            rel="noreferrer"
+            className="card group flex items-start gap-4 p-6 transition hover:-translate-y-0.5 hover:shadow-xl"
+          >
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-900 text-brass-300">
+              <RadioIcon className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block text-sm text-ink-soft">Listen live</span>
+              <span className="mt-1 flex items-center gap-1 font-semibold text-navy-900">
+                Liberty RoundTable
+                <ArrowUpRightIcon className="h-4 w-4" aria-hidden="true" />
+              </span>
+              <span className="sr-only">(opens in a new tab)</span>
+            </span>
+          </Reveal>
+
+          <Reveal delay={160} className="rounded-2xl bg-navy-900 p-7 text-white">
+            <PencilSquareIcon className="h-7 w-7 text-brass-300" aria-hidden="true" />
+            <h2 className="mt-4 text-2xl font-semibold text-white">Haven’t signed yet?</h2>
+            <p className="mt-2 text-sm leading-relaxed text-white/75">
+              Join the movement for civility and honor in our nation.
+            </p>
+            <Link to="/pledge" className="btn-brass mt-6">
+              Sign the Pledge
+            </Link>
+          </Reveal>
         </div>
-      </main>
+
+        <Reveal delay={120} className="card overflow-hidden p-2 sm:p-4 lg:col-span-8">
+          <JotFormEmbed formId="213167564341151" title="Call for Civility Contact Us" />
+        </Reveal>
+      </section>
     </>
   )
 }
