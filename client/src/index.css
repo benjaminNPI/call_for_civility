@@ -1,6 +1,37 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --text-*: initial;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.563rem;
+  --text-3xl: 1.953rem;
+  --text-4xl: 2.441rem;
+  --text-5xl: 1.2rem;
+
+  --font-sans:
+    Inter var, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 body {
   margin: 0;
@@ -17,7 +48,7 @@ code {
 }
 
 .capital {
-  background-image: url('../build/img/cover_pic_home.webp');
+  background-image: url('/img/cover_pic_home.webp');
   position: relative;
   height: 92vh;
   width: 100%;
@@ -38,7 +69,7 @@ code {
 }
 
 .flag {
-  background-image: url('../build/img/cover_pic_about.webp');
+  background-image: url('/img/cover_pic_about.webp');
   position: relative;
   /* height: 100vh; */
   width: 100%;
