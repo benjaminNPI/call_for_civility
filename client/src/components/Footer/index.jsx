@@ -3,8 +3,8 @@ import { HeartIcon, PhoneIcon, ArrowUpRightIcon } from '@heroicons/react/24/outl
 import { mainNav, PHONE_DISPLAY, PHONE_HREF } from '../../nav'
 
 const sponsors = [
-    { name: 'Loving Liberty Radio Network', href: 'https://lovingliberty.net/', img: '/img/lovingliberty.jpg' },
-    { name: 'Rust Coin and Gift', href: 'https://rustgoldandsilver.com/', img: '/img/rustcoin.png' },
+    { name: 'Liberty United', href: 'https://liberty-united.com/', img: '/img/liberty-united.jpg' },
+    { name: 'Freewater Coin Co.', href: 'https://freewatercoinco.com/', img: '/img/freewater.png' },
     { name: 'Constitutional Sheriffs & Peace Officers Association', href: 'https://cspoa.org/', img: '/img/cspoa.png' },
     { name: 'Small Business Tech Guys', href: 'https://sbtechguys.com/', img: '/img/sbtg.png' },
 ]

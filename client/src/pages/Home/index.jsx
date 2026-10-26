@@ -231,7 +231,7 @@ const FinalCta = () => (
 );
 
 const Home = () => {
-  usePageTitle("Home");
+  usePageTitle();
   return (
     <>
       <Hero />

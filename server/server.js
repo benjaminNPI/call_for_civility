@@ -27,7 +27,14 @@ const path = require('path');
 const fs = require('fs');
 const bundled = path.join(__dirname, 'public');
 const root = fs.existsSync(bundled) ? bundled : path.join(__dirname, '../client', 'build')
-app.use(express.static(root));
+const { seoFor } = require('./seo');
+// index: false so "/" also goes through the route below and gets its meta tags
+app.use(express.static(root, { index: false }));
+
+let indexHtml;
 app.get("*", (req, res) => {
-    res.sendFile('index.html', { root });
+    indexHtml = indexHtml || fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+    const seo = seoFor(req.path);
+    const html = indexHtml.replace(/<!-- seo:[\s\S]*?<!-- \/seo -->/, seo.html);
+    res.status(seo.found ? 200 : 404).type('html').send(html);
 })
